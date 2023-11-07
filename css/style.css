@@ -27,6 +27,61 @@ p {
     background-color: #232A31;
     /*em= representa uma vez o tamanho da fonte definida no elemento pai. Ex: se no pai foi definida fonte de 10px e o filho tem 1 em, o tamanho do filho será 10px e assim por diante. Caso o pai não tenha um tamanho definido ele iráusar como base16px que é a fonte do navegador*//*nesse caso ficou 2em=2*16=32px*/
     padding: 0 2em;
-
-
+    /*impede que a propriedade padding faça o elemento crescer de tamanho. EX.: se um padding de 10px for usado em um elemento de 200px de largura e 200px de altura ele irá fazer o elemento ter 220px de largura por 220px de altura, aumentando o tamanho do elemento. quando usamos box-sizing: border-box esse aumento de tamanho não irá acontecer pois o espaço do padding será descontado do elemento pai.*/
+    box-sizing: border-box;
+    position: relative;
+}
+.logo {
+    width: 50px;
+    margin-top: 15px;
+}
+.nav {
+    position: relative;
+}
+.navbar-items {
+    position: absolute;
+    list-style: none;
+    /*display altera o comportamento dos elementos na tela. EX.: converte um elemento de bloco para um elemento de linha e um elemento de linha em bloco, assim como tambpem permite definir um elemento como flexível usando o display:flex*/
+    display: inline-block;
+    margin: 0px;
+    /*coordenada que só é possível a utilização quando se tem um elemento definido como position:absolute*/
+    right: 0px;
+    height: 80px;
+    /*line-height= altera o espaçamento entre as linhas de texto. quando se usa um line-height da mesma altura que o elemento ele acaba por centralizar o texto na vertical*/
+    line-height: 80px;
+    list-style: none;
+}
+.navbar-items li{
+    display: inline-block;
+    /*text-transform: upperase = transforma todo o texto em caixa alta (CAPS LOCK)*/
+    text-transform: uppercase;
+    margin-left:25px;
+}
+.navbar-items li a {
+    color: #fff;
+    /*retira o estilo underline do link*/
+    text-decoration: none;
+    /*define em quanto tempo a ação do hover irá acontecer. transition não é necessário, mas é usado para deixar a animação mais suave. tem que ser sempre colocado antes da hover em si*/
+    transition: 1s;
+}
+/*hover = representa o passar do mouse sobre o elemento*/
+.navbar-items li a:hover{
+    color:#bbb
+    ;
+}
+.default-btn {
+    background-color: #2CC76A;
+    padding: 15px 20px;
+    /*border-radius = arredonda as bordas dos elementos dá pra colocar os quatro lados diferentes*/
+    border-radius: 5px;
+}
+.main-banner {
+    background-image: url('../img/mainbanner.png');
+    /*define como a imagem irá se adaptar ao elemento onde ela foi inserida. o valor cover define que a imagem terá o menor tamanho possível, fazendo assim que ele consiga caber dentro do elemento*/
+    background-size:cover;
+    /*define se a imagem irá se repetir ou não. EX.: repeat: irá se repetir tanto no eixo x quanto no y, repeat-x: irá se repetir somento no eixo x, repeat-y: irá se repetir somente no eixo y e no-repeat: define que a imgem não irá se repetir */
+    background-repeat: no-repeat;
+    /*define como a imagem será exibida dentro do elemento onde ela foi inserida. EX.; neste caso define que a imagem será posicionada a partir do seu centro no elemento em que ela estiver.*/
+    background-position: center;
+    padding: 10em 0;
 }
