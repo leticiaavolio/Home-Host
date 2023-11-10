@@ -148,4 +148,79 @@ p {
 }
 .plans-container {
     display: flex;
+    /*são colocados automaticamente quando você define o display: flex flex-direction: row;
+    flex-wrap: nowrap;*/
+    /*space-between aplica espaçamento entre os elementos filhos, esse espaço irá depender de quanto espaço vazio resta no elemento pai. space-around faz o mesmo que o space-between com a única diferença que também será colocado espaçamento das margens esquerda e direita*/
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /*também poderia ser margin:50 0 auto*/
+}
+.plans-container .plan {
+    width: 300px;
+    margin: 0 20px;
+}
+.plans-container .plan ul {
+    list-style: none;
+    padding: 0;
+}
+.plan li {
+    height: 70px;
+    background-color: #e8e9ea;
+    color: #333;
+    line-height: 70px;
+
+}
+.plan .price {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #2CC76A;
+    color: #fff;
+    text-align: center;
+    line-height: 140px;
+    font-size: 20px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: -50px;
+}
+.plan .plan-name {
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #fff;
+    background-color: #202b34;
+    font-weight: bold;
+}
+.plan .plan-btn {
+    background-color: #2CC76A;
+    color: #fff;
+    font-size: 27px;
+    height: 75px;
+    line-height: 75px;
+    cursor:pointer
+}
+.plan .recommended {
+    backgroun
+    d-color: #f45c57;
+}
+.searchdomain-container {
+    background-color: #34454e;
+    text-align: center;
+    padding: 5em 0;
+}
+.searchdomain-container h2 {
+    color: #fff;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.searchdomain-container p {
+    color: #d5d5d5;
+    font-size: 24px;
+    margin-bottom: 25px;
 }
